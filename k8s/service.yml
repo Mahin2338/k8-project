@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: url-shortener
+  name: game-2048
 spec:
   selector:
-    app: url-shortener
+    app: game-2048
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8080
+      targetPort: 80

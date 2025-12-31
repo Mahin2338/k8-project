@@ -1,27 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: url-shortener-deployment
+  name: game-2048
   labels:
-    app: url-shortener
+    app: game-2048
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: url-shortener
+      app: game-2048
   template:
     metadata:
       labels:
-        app: url-shortener
+        app: game-2048
     spec:
-      serviceAccountName: url-shortener
       containers:
-      - name: url-app
-        image: "754056705747.dkr.ecr.eu-west-2.amazonaws.com/url-app:d561123" 
+      - name: game-2048
+        image: 754056705747.dkr.ecr.eu-west-2.amazonaws.com/url-app:478b6ec
         ports:
-        - containerPort: 8080
-        env:
-        - name: TABLE_NAME
-          value: "url-shortener"
-        - name: AWS_DEFAULT_REGION
-          value: "eu-west-2"
+        - containerPort: 80
