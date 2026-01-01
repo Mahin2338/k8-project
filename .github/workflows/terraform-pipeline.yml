@@ -27,17 +27,13 @@ jobs:
           directory: terraform/
           framework: terraform
           output_format: cli
-          soft_fail: true
-      - name: Debug - List files
-        run: pwd
-          ls -la 
-          ls -la terraform/ || echo "terraform/ not here"    
+          soft_fail: true   
       - name: Terraform init
-        working-directory: terraform/
+        working-directory: ./terraform
         run: terraform init
       - name: Terraform plan
-        working-directory: terraform/
+        working-directory: ./terraform
         run: terraform plan
       - name: Terraform Apply
-        working-directory: terraform/
+        working-directory: ./terraform
         run: terraform apply -auto-approve
