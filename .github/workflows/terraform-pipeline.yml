@@ -29,11 +29,11 @@ jobs:
           output_format: cli
           soft_fail: true   
       - name: Terraform init
-        working-directory: ./terraform
+        working-directory: ./terraform/modules
         run: terraform init
       - name: Terraform plan
-        working-directory: ./terraform
+        working-directory: ./terraform/modules
         run: terraform plan
       - name: Terraform Apply
-        working-directory: ./terraform
+        working-directory: ./terraform/modules
         run: terraform apply -auto-approve
