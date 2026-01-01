@@ -29,8 +29,7 @@ jobs:
           output_format: cli
           soft_fail: true
       - name: Debug - List files
-        run: |
-          pwd
+        run: pwd
           ls -la 
           ls -la terraform/ || echo "terraform/ not here"    
       - name: Terraform init
