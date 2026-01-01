@@ -32,7 +32,7 @@ jobs:
         run: |
           pwd
           ls -la 
-          ls -la terraform/ || echo "terraform/ doesnt exist"    
+          ls -la terraform/ || echo "terraform/ not here"    
       - name: Terraform init
         working-directory: terraform/
         run: terraform init
