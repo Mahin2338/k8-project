@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: game-2048
+  name: devops-api
   labels:
-    app: game-2048
+    app: devops-api
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: game-2048
+      app: devops-api
   template:
     metadata:
       labels:
-        app: game-2048
+        app: devops-api
     spec:
       containers:
-      - name: game-2048
-        image: 754056705747.dkr.ecr.eu-west-2.amazonaws.com/url-app:478b6ec
+      - name: devops-api
+        image: 754056705747.dkr.ecr.eu-west-2.amazonaws.com/url-app:4ad783e
         ports:
-        - containerPort: 80
+        - containerPort: 8080

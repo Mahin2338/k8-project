@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: game-2048
+  name: devops-api
 spec:
   ingressClassName: nginx
   rules:
@@ -11,6 +11,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: game-2048
+            name: devops-api
             port:
               number: 80
