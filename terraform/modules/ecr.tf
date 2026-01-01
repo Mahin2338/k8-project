@@ -6,7 +6,7 @@ resource "aws_ecr_repository" "url-app" {
   }
 
   tags = {
-    Environment = "dev"
+    Environment = "staging"
     Terraform   = "true"
   }
 
