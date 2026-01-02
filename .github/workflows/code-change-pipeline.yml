@@ -35,7 +35,7 @@ jobs:
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         run: |
-          docker tag app-api:${{ github.sha }} $ECR_REGISTRY/app-api:${{ github.sha }}
+          docker tag app-api:${{ github.sha }} $ECR_REGISTRY/url-app:${{ github.sha }}
           
       
       - name: Run Trivy vulnerability scanner
