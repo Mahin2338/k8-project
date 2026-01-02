@@ -90,3 +90,5 @@ def stats():
         "total_urls": len(urls),
         "total_endpoints": 9
     }
+
+echo "testing CICD pipeline"
