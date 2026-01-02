@@ -91,4 +91,4 @@ def stats():
         "total_endpoints": 9
     }
 
-echo "testing CIcd "
+echo "testing CIc "

@@ -56,12 +56,7 @@ jobs:
         run: |
           docker push $ECR_REGISTRY/url-app:${{ github.sha }}
         
-      - name: DEBUG - FILE STRUCTURE
-        run: | 
-          pwd
-          ls -la 
-          ls -la k8s/ || echo "k8s folder doesnt exist"
-          find . -name "deployment.yml"
+      
       - name: Update Kubernetes manifest
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
