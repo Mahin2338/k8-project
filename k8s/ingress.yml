@@ -2,10 +2,18 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: devops-api
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: eks.mahindevopslab.com
+    cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   ingressClassName: nginx
+  tls:
+  - hosts:
+    - eks.mahindevopslab.com
+    secretName: eks-tls-cert
   rules:
-  - http:
+  - host: eks.mahindevopslab.com
+    http:
       paths:
       - path: /
         pathType: Prefix
