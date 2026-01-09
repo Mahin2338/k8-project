@@ -12,5 +12,3 @@ spec:
     - dns01:
         route53:
           region: eu-west-2
-          
-          
