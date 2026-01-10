@@ -3,9 +3,11 @@
 # Overview
 
 This project is a production-grade deployment of a FastAPI devops tools  application on AWS EKS. The deployment spans three availability zones for high availability and uses EKS Managed Node Groups for scalability. Infrastructure is automated using Terraform, and the application is containerised using Docker and stored in Amazon ECR.
+<img width="1920" height="1015" alt="Screenshot (443)" src="https://github.com/user-attachments/assets/27787e76-7ed3-4584-8a01-ce7bb1f98749" />
 
 # Architecture
 
+![Untitled Diagram](https://github.com/user-attachments/assets/cad2a8a6-fb79-43ca-af4d-a6106e4f0032)
 
 
 # Key Features
@@ -68,6 +70,7 @@ This project is a production-grade deployment of a FastAPI devops tools  applica
 - **Prometheus/Grafana**: Monitoring and observability
 
 ## CI/CD Pipeline
+<img width="1920" height="1080" alt="Screenshot (448)" src="https://github.com/user-attachments/assets/fc275682-35f9-4c5b-a9dd-8b53b193e0a0" />
 
 ### GitHub Actions Workflow for changes in /app folder
 
@@ -103,10 +106,12 @@ This project is a production-grade deployment of a FastAPI devops tools  applica
 - **Private Subnets**: Worker nodes isolated in private subnets
 
 ## GitOps with ArgoCD
+<img width="1920" height="921" alt="Screenshot (446)" src="https://github.com/user-attachments/assets/9804d44d-623e-4d1e-9390-dbda5415cb2e" />
 
 ArgoCD continuously monitors the GitHub repository and automatically syncs the cluster state with the desired state defined in Git. Any changes to Kubernetes manifests trigger automatic deployments.
 
 ## Monitoring
+<img width="1920" height="946" alt="Screenshot (445)" src="https://github.com/user-attachments/assets/c2077e14-f9e5-4a0b-a961-98a99d1f36de" />
 
 ### Prometheus
 
