@@ -2,7 +2,7 @@
 
 # Overview
 
-This project is a production-grade deployment of a FastAPI application on AWS EKS. The deployment spans three availability zones for high availability and uses EKS Managed Node Groups for scalability. Infrastructure is automated using Terraform, and the application is containerised using Docker and stored in Amazon ECR.
+This project is a production-grade deployment of a FastAPI devops tools  application on AWS EKS. The deployment spans three availability zones for high availability and uses EKS Managed Node Groups for scalability. Infrastructure is automated using Terraform, and the application is containerised using Docker and stored in Amazon ECR.
 
 # Architecture
 
@@ -56,6 +56,7 @@ This project is a production-grade deployment of a FastAPI application on AWS EK
 - **Route 53**: DNS management for eks.mahindevopslab.com
 - **ECR**: Private container registry
 - **IAM**: IRSA roles for ExternalDNS and CertManager
+- **STATE MANAGEMENT**: remote state stored in S3 and statelocking enabled via Dynamodb
 
 ### Kubernetes Components
 
