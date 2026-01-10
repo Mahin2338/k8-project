@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: devops-api
-        image: 754056705747.dkr.ecr.eu-west-2.amazonaws.com/url-app:4ad783e
+        image: 754056705747.dkr.ecr.eu-west-2.amazonaws.com/url-app:d4f025cc21be8f60e1bd170a63cf61c8e18e2d59
         ports:
         - containerPort: 8080
